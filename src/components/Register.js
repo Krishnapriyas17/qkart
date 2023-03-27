@@ -13,7 +13,6 @@ const Register = () => {
   const { enqueueSnackbar } = useSnackbar();
   const[data,setData]=useState({ username: "", password: "", confirmPassword:"" });
   const [isLoading, setIsLoading] = useState(false)
-  
   const updateUsername=(event)=>{
     setData({ ...data, username: event.target.value });
   }
@@ -108,7 +107,12 @@ const Register = () => {
       flexDirection="column"
       justifyContent="space-between"
       minHeight="100vh"
-    >      <Header hasHiddenAuthButtons ={true}/>      <Box className="content">        <Stack spacing={2} className="form">          <h2 className="title">Register</h2>          <TextField
+    >      
+    <Header hasHiddenAuthButtons ={true}/>      
+    <Box className="content">        
+    <Stack spacing={2} className="form">          
+    <h2 className="title">Register</h2>          
+    <TextField
             id="username"
             label="Username"
             variant="outlined"
@@ -118,7 +122,8 @@ const Register = () => {
             fullWidth
             value={data.username}
             onChange={(event)=>updateUsername(event)}
-          />          <TextField
+          />          
+          <TextField
             id="password"
             variant="outlined"
             label="Password"
@@ -144,8 +149,8 @@ const Register = () => {
           {!isLoading &&           
           <Button className="button" variant="contained"  onClick={()=>register(data)}>            Register Now
            </Button>}
-           <p className="secondary-action">            
-           Already have an account?{" "}
+          <p className="secondary-action">            
+          Already have an account?{" "}
             <Link to="/login">              
             Login here
             </Link>          

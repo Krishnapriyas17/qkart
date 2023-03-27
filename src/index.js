@@ -7,11 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/system";
 import theme from "./theme";
 ReactDOM.render(
-  <React.StrictMode>    
-    <BrowserRouter>    
-    <ThemeProvider theme={theme}>    
-    <SnackbarProvider          
-    maxSnack={1}
+  <React.StrictMode>
+    <BrowserRouter> 
+  <ThemeProvider theme={theme}>
+        <SnackbarProvider
+          maxSnack={1}
           anchorOrigin={{
             vertical: "bottom",
             horizontal: "center",
